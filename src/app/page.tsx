@@ -752,7 +752,7 @@ export default function QuizInterativo() {
                           <ul className="space-y-2 text-sm">
                             <li className="flex items-center gap-2">
                               <span className="text-green-600">✅</span>
-                              <span>600 Atividades Alfabetização</span>
+                              <span>Livro de Atividades de Grafismo Fonético</span>
                             </li>
                             <li className="flex items-center gap-2">
                               <span className="text-green-600">✅</span>
