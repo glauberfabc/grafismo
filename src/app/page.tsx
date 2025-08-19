@@ -97,7 +97,7 @@ const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog }: {
             <div className="text-xl font-bold text-gray-900 mb-1">R$5,70</div>
             <div className="text-xs text-gray-600 mb-2">3 benefícios</div>
             <div className="space-y-1 text-xs">
-              <div>✅ 600 Atividades</div>
+              <div>✅ Atividades de Grafismo Fonético</div>
               <div>✅ Garantia 7 dias</div>
               <div>✅ Suporte</div>
             </div>
