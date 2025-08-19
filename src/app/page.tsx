@@ -248,7 +248,7 @@ const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog }: {
           variant="outline" 
           onClick={() => {
             setShowUpgradeDialog(false)
-            window.open('https://flownetic-digital.mycartpanda.com/checkout/191852943:1', '_blank')
+            window.open('https://www.ggcheckout.com/checkout/v2/xW5nwsfThXqWmdg8nsOj', '_blank')
           }}
           className="sm:w-auto text-xs h-8"
         >
@@ -257,7 +257,7 @@ const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog }: {
         <Button 
           onClick={() => {
             setShowUpgradeDialog(false)
-            window.open('https://flownetic-digital.mycartpanda.com/checkout/192835605:1', '_blank')
+            window.open('https://www.ggcheckout.com/checkout/v2/FrCkQXFGtH9MWPToRPIB', '_blank')
           }}
           className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white sm:w-auto pulse-button text-xs h-8"
         >
@@ -866,7 +866,7 @@ export default function QuizInterativo() {
                           <Button 
                             size="lg" 
                             className="w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 text-lg shadow-lg transform hover:scale-105 transition-all duration-200 pulse-button"
-                            onClick={() => window.open('https://flownetic-digital.mycartpanda.com/checkout/192834624:1', '_blank')}
+                            onClick={() => window.open('https://www.ggcheckout.com/checkout/v2/278o016sBwJ2hwQ1OFUd', '_blank')}
                           >
                             <Sparkles className="w-5 h-5 mr-2" />
                             Adquira Já
