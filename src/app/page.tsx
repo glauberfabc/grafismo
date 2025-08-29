@@ -111,7 +111,7 @@ const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog }: {
             <div className="text-base font-bold text-purple-800 mb-1">Kit Completo</div>
             <div className="text-xl font-bold text-purple-900 mb-1">
               <span className="line-through text-gray-500 text-xs block">R$36,90</span>
-              <span className="text-green-600 text-base">R$17,90</span>
+            <span className="text-green-600 text-base">R$17,90</span>
             </div>
             <div className="text-xs text-purple-600 mb-2">18 benefícios</div>
             <div className="space-y-1 text-xs">
@@ -131,7 +131,7 @@ const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog }: {
           <div className="grid grid-cols-2 gap-1 text-xs">
             <div className="flex items-center gap-1">
               <span className="text-purple-600 text-sm">💎</span>
-              <span>Economia R$19,00</span>
+            <span>Economia R$19,00</span>
             </div>
             <div className="flex items-center gap-1">
               <span className="text-purple-600 text-sm">🎮</span>
@@ -248,7 +248,7 @@ const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog }: {
           variant="outline" 
           onClick={() => {
             setShowUpgradeDialog(false)
-            window.open('https://flownetic-digital.mycartpanda.com/checkout/191852943:1', '_blank')
+          window.open('https://flownetic-digital.mycartpanda.com/checkout/191852943:1', '_blank')
           }}
           className="sm:w-auto text-xs h-8"
         >
@@ -257,7 +257,7 @@ const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog }: {
         <Button 
           onClick={() => {
             setShowUpgradeDialog(false)
-            window.open('https://flownetic-digital.mycartpanda.com/checkout/192835605:1', '_blank')
+        window.open('https://flownetic-digital.mycartpanda.com/checkout/192835605:1', '_blank')
           }}
           className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white sm:w-auto pulse-button text-xs h-8"
         >
@@ -752,7 +752,7 @@ export default function QuizInterativo() {
                           <ul className="space-y-2 text-sm">
                             <li className="flex items-center gap-2">
                               <span className="text-green-600">✅</span>
-                              <span>600 Atividades Alfabetização</span>
+                            <span>600 Atividades Alfabetização</span>
                             </li>
                             <li className="flex items-center gap-2">
                               <span className="text-green-600">✅</span>
@@ -783,7 +783,7 @@ export default function QuizInterativo() {
                             Kit Completo
                           </CardTitle>
                           <div className="text-3xl font-bold text-purple-900">
-                            R$17,90
+                        R$17,90
                           </div>
                           <p className="text-sm text-purple-600">
                             À vista no PIX
@@ -866,7 +866,7 @@ export default function QuizInterativo() {
                           <Button 
                             size="lg" 
                             className="w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 text-lg shadow-lg transform hover:scale-105 transition-all duration-200 pulse-button"
-                            onClick={() => window.open('https://flownetic-digital.mycartpanda.com/checkout/192834624:1', '_blank')}
+                          onClick={() => window.open('https://flownetic-digital.mycartpanda.com/checkout/192834624:1', '_blank')}
                           >
                             <Sparkles className="w-5 h-5 mr-2" />
                             Adquira Já
