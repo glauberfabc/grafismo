@@ -111,7 +111,7 @@ const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog }: {
             <div className="text-base font-bold text-purple-800 mb-1">Kit Completo</div>
             <div className="text-xl font-bold text-purple-900 mb-1">
               <span className="line-through text-gray-500 text-xs block">R$36,90</span>
-              <span className="text-green-600 text-base">R$27,90</span>
+              <span className="text-green-600 text-base">R$17,90</span>
             </div>
             <div className="text-xs text-purple-600 mb-2">18 benefícios</div>
             <div className="space-y-1 text-xs">
@@ -131,7 +131,7 @@ const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog }: {
           <div className="grid grid-cols-2 gap-1 text-xs">
             <div className="flex items-center gap-1">
               <span className="text-purple-600 text-sm">💎</span>
-              <span>Economia R$9,00</span>
+              <span>Economia R$19,00</span>
             </div>
             <div className="flex items-center gap-1">
               <span className="text-purple-600 text-sm">🎮</span>
@@ -783,7 +783,7 @@ export default function QuizInterativo() {
                             Kit Completo
                           </CardTitle>
                           <div className="text-3xl font-bold text-purple-900">
-                            R$36,90
+                            R$17,90
                           </div>
                           <p className="text-sm text-purple-600">
                             À vista no PIX
