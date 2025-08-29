@@ -73,11 +73,18 @@ const getQuizResult = (totalScore: number): QuizResult => {
 }
 
 // Componente de diálogo de upgrade
-const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog }: { 
+const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog, isFromBasicOption, resetUpgradeDialog }: { 
   showUpgradeDialog: boolean; 
-  setShowUpgradeDialog: (show: boolean) => void; 
+  setShowUpgradeDialog: (show: boolean) => void;
+  isFromBasicOption: boolean;
+  resetUpgradeDialog: () => void;
 }) => (
-  <Dialog open={showUpgradeDialog} onOpenChange={setShowUpgradeDialog}>
+  <Dialog open={showUpgradeDialog} onOpenChange={(open) => {
+    if (!open) {
+      resetUpgradeDialog()
+    }
+    setShowUpgradeDialog(open)
+  }}>
     <DialogContent className="sm:max-w-md max-h-[85vh] overflow-y-auto p-4">
       <DialogHeader className="pb-2">
         <DialogTitle className="text-lg font-bold text-center text-purple-800">
@@ -111,7 +118,7 @@ const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog }: {
             <div className="text-base font-bold text-purple-800 mb-1">Kit Completo</div>
             <div className="text-xl font-bold text-purple-900 mb-1">
               <span className="line-through text-gray-500 text-xs block">R$36,90</span>
-            <span className="text-green-600 text-base">R$17,90</span>
+            <span className="text-green-600 text-base">{isFromBasicOption ? 'R$12,90' : 'R$17,90'}</span>
             </div>
             <div className="text-xs text-purple-600 mb-2">18 benefícios</div>
             <div className="space-y-1 text-xs">
@@ -131,7 +138,7 @@ const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog }: {
           <div className="grid grid-cols-2 gap-1 text-xs">
             <div className="flex items-center gap-1">
               <span className="text-purple-600 text-sm">💎</span>
-            <span>Economia R$19,00</span>
+            <span>Economia R${isFromBasicOption ? '24,00' : '19,00'}</span>
             </div>
             <div className="flex items-center gap-1">
               <span className="text-purple-600 text-sm">🎮</span>
@@ -248,7 +255,8 @@ const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog }: {
           variant="outline" 
           onClick={() => {
             setShowUpgradeDialog(false)
-          window.open('https://flownetic-digital.mycartpanda.com/checkout/191852943:1', '_blank')
+            resetUpgradeDialog()
+            window.open('https://flownetic-digital.mycartpanda.com/checkout/191852943:1', '_blank')
           }}
           className="sm:w-auto text-xs h-8"
         >
@@ -257,6 +265,7 @@ const UpgradeDialog = ({ showUpgradeDialog, setShowUpgradeDialog }: {
         <Button 
           onClick={() => {
             setShowUpgradeDialog(false)
+            resetUpgradeDialog()
         window.open('https://flownetic-digital.mycartpanda.com/checkout/192835605:1', '_blank')
           }}
           className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white sm:w-auto pulse-button text-xs h-8"
@@ -278,8 +287,13 @@ export default function QuizInterativo() {
   const [quizCompleted, setQuizCompleted] = useState(false)
   const [showResult, setShowResult] = useState(false)
   const [showUpgradeDialog, setShowUpgradeDialog] = useState(false)
+  const [isFromBasicOption, setIsFromBasicOption] = useState(false)
   const [carouselApi, setCarouselApi] = useState<any>(null)
   const [testimonialsCarouselApi, setTestimonialsCarouselApi] = useState<any>(null)
+
+  const resetUpgradeDialog = () => {
+    setIsFromBasicOption(false)
+  }
 
   const questions: Question[] = [
     {
@@ -552,7 +566,9 @@ export default function QuizInterativo() {
       <>
         <UpgradeDialog 
           showUpgradeDialog={showUpgradeDialog} 
-          setShowUpgradeDialog={setShowUpgradeDialog} 
+          setShowUpgradeDialog={setShowUpgradeDialog}
+          isFromBasicOption={isFromBasicOption}
+          resetUpgradeDialog={resetUpgradeDialog}
         />
         <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-yellow-50 p-4">
           <div className="max-w-2xl mx-auto">
@@ -766,7 +782,10 @@ export default function QuizInterativo() {
                           <Button 
                             variant="outline" 
                             className="w-full mt-4 border-gray-300 text-gray-700 hover:bg-gray-50"
-                            onClick={() => setShowUpgradeDialog(true)}
+                            onClick={() => {
+                              setIsFromBasicOption(true)
+                              setShowUpgradeDialog(true)
+                            }}
                           >
                             Escolher Básico
                           </Button>
@@ -916,7 +935,9 @@ export default function QuizInterativo() {
     <>
       <UpgradeDialog 
         showUpgradeDialog={showUpgradeDialog} 
-        setShowUpgradeDialog={setShowUpgradeDialog} 
+        setShowUpgradeDialog={setShowUpgradeDialog}
+        isFromBasicOption={isFromBasicOption}
+        resetUpgradeDialog={resetUpgradeDialog}
       />
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-yellow-50 p-4">
         <div className="max-w-2xl mx-auto">
