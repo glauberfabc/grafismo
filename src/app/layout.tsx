@@ -49,18 +49,14 @@ export default function RootLayout({
           async
           defer
         ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.pixelId = "689fb7dc3d9eb0d13946cded";
-              var a = document.createElement("script");
-              a.setAttribute("async", "");
-              a.setAttribute("defer", "");
-              a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-              document.head.appendChild(a);
-            `
-          }}
-        ></script>
+     <script>
+  window.pixelId = "68c0df8d61c0c9c2279ff414";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
